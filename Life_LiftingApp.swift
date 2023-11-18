@@ -2,7 +2,6 @@
 //  Life_LiftingApp.swift
 //  Life Lifting
 //
-//  Created by Lyah Morales.
 //
 
 import SwiftUI
