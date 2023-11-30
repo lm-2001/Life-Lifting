@@ -1,0 +1,36 @@
+//
+//  CalendarView.swift
+//  LifeLifting
+//
+//  Created by Justyce Graham on 11/23/23.
+//
+
+import SwiftUI
+
+struct CalendarView: View {
+    var body: some View {
+        
+        
+        
+        MultiDatePicker("Label", selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Binding<Set<DateComponents>>@*/.constant([])/*@END_MENU_TOKEN@*/)
+        
+        
+        
+        
+        HStack{
+            
+            Image(systemName: "calendar.circle.fill")
+            Image(systemName: "house")
+            Image(systemName: "person")
+            
+        }
+        
+    }
+}
+
+
+struct CalendarView_Previews: PreviewProvider {
+static var previews: some View {
+    CalendarView()
+}
+}
