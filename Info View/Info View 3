@@ -1,0 +1,150 @@
+//
+//  InfoView.swift
+//  LifeLifting
+//
+//  Created by Justyce Graham on 11/18/23.
+
+import SwiftUI
+
+struct InfoView: View {
+    var body: some View {
+        NavigationView {
+            
+            ZStack {
+                VStack {
+                    
+                    Circle()
+                        .fill(Color(red: 1, green: 1, blue: 0.561))
+                        .frame(width:450, height:500)
+                        .blur(radius: 30)
+                        .ignoresSafeArea()
+                    
+                        .overlay{
+                          
+                            Text("Choose your gender")
+                                .font(.largeTitle)
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color(.black))
+                                .frame(maxWidth: .infinity,
+                                       maxHeight: .infinity,
+                                       alignment: .bottom)
+                        }
+                    
+                    
+                    Circle()
+                        .fill(Color(red: 1, green: 0.714, blue: 0.757))
+                        .frame(width:370, height:370)
+                        .blur(radius: 30)
+                    
+                        .overlay{
+                            HStack {
+                                NavigationLink(destination: MaleView())
+                                {
+                                    Text("Male")
+                                        .frame(width: 150, height: 50) // Adjust the size as needed
+                                        .foregroundColor(.white)
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
+                                        .navigationBarBackButtonHidden(true)
+                                }
+                                .padding()
+                                
+                                NavigationLink {
+                                    FemaleView()
+                                        .navigationBarBackButtonHidden(true)
+                                } label: {
+                                    Text("Female")
+                                        .frame(width: 150, height: 50) // Adjust the size as needed
+                                        .foregroundColor(.white)
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
+                                }
+                                .padding()
+                                
+                            }
+                        }
+                    
+                    
+                    Circle()
+                        .fill(Color(red: 0.502, green: 0.07843137, blue: 0.17647059))
+                        .frame(width:500, height:400)
+                        .blur(radius: 30)
+                        .ignoresSafeArea()
+                }
+                
+            }}}}
+
+            struct InfoView_Previews: PreviewProvider {
+                static var previews: some View {
+                    InfoView()
+                }
+}
+    
+        /*
+         ZStack {
+         
+         VStack {
+         
+         Circle()
+         .fill(Color(red: 1, green: 1, blue: 0.561))
+         .frame(width:450, height:500)
+         .blur(radius: 30)
+         .ignoresSafeArea()
+         
+         .overlay{
+         Text("Choose your gender")
+         .font(.largeTitle)
+         .fontWeight(.semibold)
+         .foregroundColor(Color(.black))
+         .frame(maxWidth: .infinity,
+         maxHeight: .infinity,
+         alignment: .bottom)
+         }
+         
+         
+         Circle()
+         .fill(Color(red: 1, green: 0.714, blue: 0.757))
+         .frame(width:370, height:370)
+         .blur(radius: 30)
+         
+         .overlay{
+         HStack {
+         NavigationLink(destination: MaleView())
+         {
+         Text("Male")
+         .frame(width: 150, height: 50) // Adjust the size as needed
+         .foregroundColor(.white)
+         .background(Color.blue)
+         .cornerRadius(10)
+         .navigationBarBackButtonHidden(true)
+         }
+         .padding()
+         
+         NavigationLink {
+         FemaleView()
+         .navigationBarBackButtonHidden(true)
+         } label: {
+         Text("Female")
+         .frame(width: 150, height: 50) // Adjust the size as needed
+         .foregroundColor(.white)
+         .background(Color.blue)
+         .cornerRadius(10)
+         }
+         .padding()
+         
+         }
+         }
+         
+         
+         Circle()
+         .fill(Color(red: 0.502, green: 0.07843137, blue: 0.17647059))
+         .frame(width:500, height:400)
+         .blur(radius: 30)
+         .ignoresSafeArea()
+         
+         
+         }
+         }
+         */
+    
+
